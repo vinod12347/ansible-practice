@@ -1,0 +1,13 @@
+- name: task level varibales
+  hosts: local
+  connection: local
+  tasks:
+    - name: print the values
+      vars:
+        name: vinod
+        email: vinodkj@gmail.com
+        address: tumkur
+      ansible.builtin.debug:
+        msg: "name is {{ name }}, email is {{ email }} and address is {{ address }}"
+
+
