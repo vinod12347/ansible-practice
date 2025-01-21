@@ -7,6 +7,6 @@
         COURSE: "Devops with aws"
         DURATION: "120 Hours"
         TRAINER: "Sivakumar reddy"
-    ansible.builtin.debug:
-      msg: "Course {{COURSE}}, DURATION: {{DURATION}} and Trainer {{TRAINER}}"
+      ansible.builtin.debug:
+        msg: "Course {{COURSE}}, DURATION: {{DURATION}} and Trainer {{TRAINER}}"
     
