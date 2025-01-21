@@ -9,5 +9,16 @@
         address: tumkur
       ansible.builtin.debug:
         msg: "name is {{ name }}, email is {{ email }} and address is {{ address }}"
+    
+    - name: read from files
+      vars_files:
+        - list.yml
+      tasks:
+        - name: read  variable from files
+          ansible.builtin.debug:
+            msg: "name is {{ name }} and email is {{ email }}"
+
+
+      
 
 
