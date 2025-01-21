@@ -9,3 +9,8 @@
     - name: print the  variable1
       ansible.builtin.debug:
         msg: "Course {{COURSE}} and duration {{DURATION}} and trainer is {{TRAINER}}"
+    - name: print the  variable1
+      vars:
+        COURSE: "Asible"
+      ansible.builtin.debug:
+        msg: "Course {{COURSE}} and duration {{DURATION}} and trainer is {{TRAINER}}"
