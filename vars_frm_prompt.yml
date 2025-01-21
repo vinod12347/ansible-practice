@@ -13,6 +13,13 @@
       private: false
   tasks:
     - name: print the variables
+      vars_prompt:
+        - name: USERNAME
+          prompt: ener the username
+          private: false
+        - name: PASSWORD
+          prompt: enter the password
+          private: true
       ansible.builtin.debug:
         msg: "Course {{ COURSE}}, Duration {{ DURATION }} and Trainer {{ TRAINER }}"
 
