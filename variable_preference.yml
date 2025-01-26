@@ -1,0 +1,11 @@
+- name: variable preferences
+  hosts: local
+  connection: local
+  vars:
+   GREET: "play level greetings"
+  tasks:
+    - name: print variables
+      vars:
+        GREET: "Task level greetings"
+      ansible.builtin.debug:
+        msg: "welcome to {{ GREET }}"
