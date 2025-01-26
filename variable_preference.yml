@@ -3,6 +3,12 @@
   connection: local
   vars:
    GREET: "play level greetings"
+  vars_files:
+    - course.yml
+  vars_prompt:
+    - name: GREET
+      prompt: "enter the greeting message"
+      private: flase
   tasks:
     - name: print variables
       vars:
