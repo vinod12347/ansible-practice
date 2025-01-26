@@ -3,8 +3,8 @@
   connection: local
   vars:
    GREET: "play level greetings"
-  vars_files:
-    - course.yml
+  # vars_files:
+  #   - course.yml
   vars_prompt:
     - name: GREET
       prompt: "enter the greeting message"
@@ -18,3 +18,4 @@
 
 # 1 comamnd line argumnets
 # 2 Task level variables
+# 3 file preference
