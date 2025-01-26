@@ -1,0 +1,23 @@
+- name: data types in ansible
+  hosts: local
+  connectinos: local
+  vars:
+   COURSE_NAME: "Devosps 82 branch"
+   LIVE: true
+   DURATION: 210
+   TOPICS:
+   - linux
+   - ansible
+   - shell script
+   - aws
+   - teraform
+   tools:
+    CI: Jenkins
+    CLOUD: aws
+    CONTAINER: Docker
+  tasks:
+    - name: data types in ansible
+      ansible.module.debug:
+        msg: "Course {{ COURSE_NAME }}, Duration {{ DURATION }}, isLive {{ LIVE }},Topics {{ TOPICS }} and tools {{ tools }}"
+
+    
