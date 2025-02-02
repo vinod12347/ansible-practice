@@ -1,6 +1,6 @@
 - name: if statement example
   hosts: local
-  connections: local
+  connection: local
   vars:
     GREETING: "hello vinod"
     COUNT: 10
