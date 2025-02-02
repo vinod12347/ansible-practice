@@ -11,8 +11,8 @@
     - name: check less then 18 or not
       ansible.builtin.debug:
         msg: "eligible for vote"
-      when: my_integer < 18
+      when: {{ my_integer }} < 18
     - name: greator then 18
       ansible.builtin.debug:
         msg: "eligible for vote"
-      when: my_integer >= 18
+      when: {{ my_integer }} >= 18
