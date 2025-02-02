@@ -1,5 +1,5 @@
 - name: string comparasion
-  host: local
+  hosts: local
   connection: local
   vars_prompt:
     prompt: enter the age
