@@ -1,0 +1,11 @@
+- name: string comparation
+  hosts: local
+  connection: local
+  tasks:
+    - name: reading files from files
+      ansible.builtin.include.vars:
+        file: message.yml
+        name: message
+    - name : printing files
+      ansible.builtin.debug:
+        msg: "file content {{ message }}"
