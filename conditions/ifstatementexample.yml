@@ -1,0 +1,11 @@
+- name: if statement example
+  hosts: local
+  connections: local
+  vars:
+    GREETING: "hello vinod"
+    COUNT: 10
+  tasks:
+    - name: execute if statement
+      ansible.builtin.debug:
+        msg: "hello {{ GREETING }}"
+      when: count > 10

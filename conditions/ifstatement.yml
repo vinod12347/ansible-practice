@@ -1,0 +1,7 @@
+- name: if statement example
+  hosts: local
+  connections: local
+  tasks:
+    - name: print message
+      ansible.builtin.debug:
+        msg: "hello word"
