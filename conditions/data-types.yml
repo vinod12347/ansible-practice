@@ -1,0 +1,22 @@
+- name: data types in ansible
+  hosts: local
+  connection: local
+  vars:
+    tools:
+      - linux
+      - shell script
+      - ansible
+      - terraform
+    map:
+      course: devops
+      jenkins: CI/CD
+      version_control: git
+    live: true
+    duration: 120
+      
+  tasks:
+    - name: print the variables
+      ansible.builtin.debug:
+        msg: "course {{ tools }} map {{ map }} live {{ live }} duration {{ 120 }} hours"
+
+      
