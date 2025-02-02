@@ -5,7 +5,7 @@
     - name: reading files from files
       ansible.builtin.include_vars:
         file: message.yml
-        name: message
+        name: MESSAGE
     - name : printing files
       ansible.builtin.debug:
-        msg: "file content {{ message }}"
+        msg: "env {{ MESSAGE.env }} name space: {{ MESSAGE.name_space }}"
