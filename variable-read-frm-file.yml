@@ -1,7 +1,7 @@
 - name: reading variable from files
   hosts: local
   connection: local
-  vars_files:
+  var_files:
     - course.yml
   tasks:
     - name: printing variables
