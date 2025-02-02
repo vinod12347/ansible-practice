@@ -1,0 +1,15 @@
+- name: string comparasion
+  host: local
+  connection: local
+  vars_prompt:
+    prompt: enter the age
+    name: age
+  tasks:
+    - name: check less then 18 or not
+      ansible.builtin.debug:
+        msg: "eligible for vote"
+      when: age < 18
+    - name: greator then 18
+      ansible.builtin.debug:
+        msg: "eligible for vote"
+      when: age >= 18
