@@ -1,6 +1,6 @@
 - name: if statement example
   hosts: local
-  connections: local
+  connection: local
   tasks:
     - name: print message
       ansible.builtin.debug:
