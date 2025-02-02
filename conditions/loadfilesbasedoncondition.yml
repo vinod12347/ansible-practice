@@ -1,0 +1,13 @@
+- name: reading a file based on condition
+  hosts: local
+  connection: local
+  vars_prompt:
+    prompt: "enter the env name"
+    name: file_name  
+  tasks:
+    - name: reading a file
+      ansible.builtin.include_vars:
+        files_matching: {{ file_name }}
+    - name: printing files content
+      ansible.builtin.debug:
+        msg: "print file content {{ files_matching }}"
