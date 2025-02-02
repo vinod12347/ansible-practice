@@ -3,7 +3,7 @@
   connection: local
   tasks:
     - name: reading files from files
-      ansible.builtin.include.vars:
+      ansible.builtin.include_vars:
         file: message.yml
         name: message
     - name : printing files
