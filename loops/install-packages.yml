@@ -2,15 +2,15 @@
   hosts: local
   become: yes
   tasks:
-   - name: install packages
-     ansible.builtin.packages:
-      name: "{{ item }}"
-      state: present
-     loop:
-      - gcc
-      - git
-      - mysql
-      - nginx
-      - zip
+    - name: install packages
+      ansible.builtin.packages:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - gcc
+        - git
+        - mysql
+        - nginx
+        - zip
 
 
