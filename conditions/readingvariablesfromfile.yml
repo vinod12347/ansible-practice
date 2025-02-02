@@ -5,5 +5,5 @@
     - message.yml
   tasks:
     - name: "reading from file"
-      ansible.builtn.debug:
+      ansible.builtin.debug:
         msg: "hello vinod {{ message }}"
