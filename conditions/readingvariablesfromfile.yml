@@ -1,0 +1,9 @@
+- name: reading variable from files
+  hosts: local
+  connection: local
+  vars_file:
+    - message.yml
+  tasks:
+    - name: "reading from file"
+    ansible.builtn.debug:
+      msg: "hello vinod {{ message }}"
