@@ -2,17 +2,17 @@
   hosts: local
   become: yes
   tasks:
-    - name: install packages
-      ansible.builtin.package:
-        name: "{{ item }}"
-        state: present
-      loop:
-        - gcc
-        - git
-        - maven
-        - java
-        - nginx
-        - mysql
-        - zip
+  - name: install packages
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+      - { name: gcc, state: present }
+      - { name: git, state: present }
+      - { name: maven, state: present }
+      - { name: java, state: present }
+      - { name: nginx, state: present }
+      - { name: mysql,state: absent }
+      - { name: zip,state: absent }
 
 
