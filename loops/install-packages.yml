@@ -3,16 +3,16 @@
   become: yes
   tasks:
     - name: install packages
-        ansible.builtin.package:
-          name: "{{ item }}"
-          state: present
-        loop:
-          - gcc
-          - git
-          - maven
-          - java
-          - nginx
-          - mysql
-          - zip
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - gcc
+        - git
+        - maven
+        - java
+        - nginx
+        - mysql
+        - zip
 
 
