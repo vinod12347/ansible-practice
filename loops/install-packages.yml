@@ -6,11 +6,11 @@
      ansible.builtin.packages:
       name: {{ item }}
       state: present
-    loop:
-    - gcc
-    - git
-    - mysql
-    - nginx
-    - zip
+     loop:
+      - gcc
+      - git
+      - mysql
+      - nginx
+      - zip
 
 
