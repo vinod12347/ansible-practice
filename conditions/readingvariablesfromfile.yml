@@ -1,7 +1,7 @@
 - name: reading variable from files
   hosts: local
   connection: local
-  var_files:
+  var_file:
     - message.yml
   tasks:
     - name: "reading from file"
