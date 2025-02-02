@@ -7,7 +7,7 @@
   tasks:
     - name: reading a file
       ansible.builtin.include_vars:
-        files_matching: {{ file_name }}
+        files_matching: "{{ file_name }}"
     - name: printing files content
       ansible.builtin.debug:
         msg: "print file content {{ files_matching }}"
