@@ -1,0 +1,13 @@
+- name: print lit of values
+  hosts: local
+  become: yes
+  tasks:
+    - name: print variables
+      ansible.builtin.debug:
+        msg: "{{ item}}"
+      loop:
+        - vinod
+        - ramesh
+        - darshan
+        - likhitha
+        - kumar
